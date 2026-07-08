@@ -120,7 +120,7 @@ export const compressPDF = (inputPath) => {
   return new Promise((resolve, reject) => {
     const outputPath = `processed/compressed-${Date.now()}.pdf`;
 
-    const command = `gswin64c -sDEVICE=pdfwrite \
+    const command = `gs -sDEVICE=pdfwrite \
 -dCompatibilityLevel=1.4 \
 -dPDFSETTINGS=/screen \
 -dNOPAUSE -dQUIET -dBATCH \
